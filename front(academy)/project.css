@@ -1,0 +1,424 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    
+    
+}
+
+.back {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.back>iframe {
+    position: absolute;
+    left: 50%;
+    width: 250vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    /* 중앙 정렬 */
+    z-index: -1;
+    object-fit: cover;
+    top: 35%;
+    
+
+}
+
+#outer {
+    
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr;
+    
+}
+
+#logo-area {
+
+    display: grid;
+    position: fixed;
+    top :0%;
+    border-bottom: 1px solid white;
+    z-index: 1;
+    place-self: center;
+
+}
+
+#logo-area>div:nth-child(1) {
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center center;
+    
+    color: black;
+    z-index: 1;
+
+    /* 가운데 정렬 */
+}
+
+#logo-area>div:nth-child(1)>div:nth-child(1) img {
+    border-radius: 20px;
+    opacity: 0.5;
+    
+   
+}
+#logo-area>div:nth-child(1)>div:nth-child(1) img:hover{
+    border-radius: 20px;
+    opacity: 0.9;
+  
+}
+
+#logo-area>div:nth-child(1)>div:nth-child(1) {
+    grid-column: span 1/2;
+
+
+}
+
+
+
+
+
+
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+.menu>li {
+    position: relative;
+    display: inline-block;
+    padding: 10px 70px;
+    cursor: pointer;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.submenu {
+    display: none;
+    /* 기본적으로 숨김 */
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    /* 메뉴 아래에 위치 */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    /* 다른 요소보다 위에 위치 */
+}
+
+.menu>li:hover {
+    background-color: #555;
+    color: white;
+    width: 100px;
+
+
+}
+
+.menu>li:hover .submenu {
+    display: block;
+    /* 호버 시 보여줌 */
+
+}
+
+.submenu li {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.submenu li:hover {
+    background-color: #555;
+    /* 서브 메뉴 호버 시 색상 변경 */
+    font-size: 25px;
+    width: 150px;
+}
+
+.submenu li:hover>a {
+    color: white;
+}
+
+#logo-area>div:nth-child(1)>div:nth-child(7) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 17px;
+
+}
+
+#outer>div:nth-child(2) {
+    padding-top: 140px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center center;
+    color: white;
+
+
+}
+
+#outer>div:nth-child(2)>div:nth-child(1)>h2:nth-child(1) {
+    font-size: 50px;
+    font-family: "굴림체";
+    padding-left: 30px;
+    color: #080d11a4;
+    animation: hello;
+    /* 호버가 진행되면 hello 에니메이션 진행 */
+    animation-duration: 8s;
+    /* 몇초에 걸쳐서 진행할꺼냐  */
+    /* duration 없으면 실행이 안됀다. */
+    animation-delay: 1s;
+    /* 몇초뒤에 시작할꺼냐 */
+    /* animation-direction: alternate; */
+    /*  reverse : 애니메이션을 거꾸로 진행할수있다  */
+    /*  alternate : 1~100 100~1 처럼 처음과 끝이 바뀌면서 재생된다*/
+    animation-iteration-count: 1;
+    /* 애니메이션을 몇번 진행할꺼냐 */
+    /* 숫자는 횟수 infinite 는 무한번 재생 */
+    animation-fill-mode: both;
+    /* forward :끝난 상태로 고정  */
+    /* backward : 바로시작 */
+    /* both 둘다적용 */
+    /* animation-timing-function:linear ; */
+    /* 속도조절 */
+    z-index: 1;
+
+
+}
+
+#outer>div:nth-child(2)>div:nth-child(1)>h2:nth-child(2) {
+    font-size: 50px;
+    font-family: "굴림체";
+    animation: hello;
+    padding-left: 20px;
+    color: #080d11a4;
+    /* 호버가 진행되면 hello 에니메이션 진행 */
+    animation-duration: 5s;
+    /* 몇초에 걸쳐서 진행할꺼냐  */
+    /* duration 없으면 실행이 안됀다. */
+    animation-delay: 4s;
+    /* 몇초뒤에 시작할꺼냐 */
+    /* animation-direction: alternate; */
+    /*  reverse : 애니메이션을 거꾸로 진행할수있다  */
+    /*  alternate : 1~100 100~1 처럼 처음과 끝이 바뀌면서 재생된다*/
+    animation-iteration-count: 1;
+    /* 애니메이션을 몇번 진행할꺼냐 */
+    /* 숫자는 횟수 infinite 는 무한번 재생 */
+    animation-fill-mode: both;
+    /* forward :끝난 상태로 고정  */
+    /* backward : 바로시작 */
+    /* both 둘다적용 */
+    /* animation-timing-function:linear ; */
+    /* 속도조절 */
+    
+
+}
+
+
+
+@keyframes hello {
+    0% {
+        opacity: 0;
+        /* transform: translateX(-300px); */
+        visibility: hidden;
+        transform: scale(1.5);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+   
+}
+
+#outer>div:nth-child(3) {
+
+    position: relative;
+    margin-top: 1200px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding-bottom: 500px;
+}
+
+#outer>div:nth-child(3)>div:nth-child(1) {
+
+    grid-column: span 4;
+    grid-row: span 2;
+    /* font-family: "굴림체"; */
+    place-self: center;
+    font-size: 24px;
+}
+
+#outer>div:nth-child(3)>div:nth-child(1)>h2:nth-child(1) {
+    margin-left: 100px;
+}
+
+#outer>div:nth-child(3)>div img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+
+}
+
+#outer>div:nth-child(3)>div {
+    place-self: center;
+}
+
+.number {
+    font-size: 50px;
+    display: inline;
+    margin-left: 40px;
+
+}
+
+#outer>div:nth-child(3)>.last-bar>img {
+
+    width: 100%;
+    height: 50%;
+
+}
+#outer>div:nth-child(4){
+    margin-top: 1800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 800px;
+    width: 1920px;
+    position: relative;
+    
+}
+
+#outer>div:nth-child(4)>div{
+    background-color: green;
+    width: 300vw;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+    
+   
+}
+
+#inner>div{
+    display: inline-block;
+    width: 100vw;
+    height: 800px;
+    
+}
+#inner{
+    transition: transform 0.3s ease;
+}
+.btnouter{
+    margin-top: 1200px;
+    z-index: 1000;
+
+
+}
+.btnouter>div{
+    display: flex;
+    position: relative;
+    justify-content: space-between; 
+    
+}
+.btnouter>div>button{
+    margin-top: 50px;
+    width: 200px;
+    height: 350px;
+    font-size: 50px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    
+    
+}
+.btnouter>div>button:hover{
+    color: gray;
+}
+
+
+#inner>div:nth-child(1){
+    background-image: url(/front\(academy\)/screen/tomok.png);
+    background-size: cover;
+    box-sizing: border-box;
+ 
+}
+#inner>div:nth-child(2){
+    background-image: url(/front\(academy\)/screen/tomok1.png);
+    background-size: cover;
+ 
+}
+#inner>div:nth-child(3){
+    background-image: url(/front\(academy\)/screen/tomok2.png);
+    background-size: cover;
+ 
+}
+.stagediv{
+    display: grid;
+    grid-template-columns: 100px 1fr 400px;
+    grid-template-rows: 1fr;
+    
+    width: 100vw;
+    height: 800px;
+    
+}
+#fristtitle{
+    margin-top: 400px;
+    place-self: center right;
+    font-size: 60px;
+    color: rgba(26, 26, 49, 0.568);
+}
+#secondtitle{
+    
+    place-self: center left;
+    font-size: 60px;
+    color: rgba(26, 26, 49, 0.568);
+}
+#thirdtitle{
+    margin-top: 100px;
+    place-self: center left;
+    font-size: 60px;
+    color: rgba(26, 26, 49, 0.781);
+}
+.last-div{
+    
+    margin-top: 300px;
+    width: 100vw;
+    height: 800px;
+}
+#leftinputField {
+    visibility: hidden;
+}
+#rightinputField {
+    visibility: hidden;
+}
