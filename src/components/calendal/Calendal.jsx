@@ -31,11 +31,13 @@ const Calendar = () => {
         <Form.Control
           as="button"
           style={{
-            width: '250px',
+            width: '166px',
             height: '50px',
+            border: 'none',
+            backgroundColor: 'white',
           }}
         >
-          일정(여기다가 한글써)
+          장소
         </Form.Control>
       }
     />
